@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import AppHome from './pages/HomePage.vue';
-import ProjectList from './pages/ProjectList.vue';
-import SingleProject from './pages/SingleProject.vue';
-import TechnologiesList from './pages/TechnologiesList.vue';
+import ChiSiamo from './pages/ChiSiamo.vue';
+import Contatti from './pages/contatti.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -14,20 +13,16 @@ const router = createRouter({
                 component: AppHome
             },
             {
-                path: '/blog',
-                name: 'projects',
-                component: ProjectList
+                path: '/chisiamo',
+                name: 'ChiSiamo',
+                component: ChiSiamo
             },
             {
-                path: '/blog',
-                name: 'project',
-                component: SingleProject
+                path: '/contatti',
+                name: 'contatti',
+                component: Contatti
             },
-            {
-                path: '/blog',
-                name: 'technologies',
-                component: TechnologiesList
-            },
+
         ]
     });
 export { router };
