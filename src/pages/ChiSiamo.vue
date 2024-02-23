@@ -1,13 +1,10 @@
 
 
 <template lang="">
-  <SingleCard class="card p-0 col-3 mx-4 my-5" v-for="post in posts" :key="post.id"
-  :title="post.title" :image="post.post_image" :content="post.content" :linkRoute="{ name: 'single-post', params: { id: post.id}}" linkLabel="Read more..."
-  />
+
 </template>
 
 <script>
-import SingleProject from '@/components/SingleProject.vue';
 import axios from 'axios';
 
 export default {
@@ -35,7 +32,6 @@ export default {
         }
     },
     components:{
-      SingleProject
     },
 
     created(){
