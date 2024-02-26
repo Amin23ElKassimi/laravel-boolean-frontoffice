@@ -19,9 +19,7 @@
                 </div>
             </div>
         </nav>
-        <div class="jumbo">
-            <img class="jumbo" src="../../public/cocktails_jumbo.jpg" alt="img of cocktails">
-        </div>
+        
     </header>
 </template>
 
@@ -49,14 +47,9 @@ export default {
 </script>
 
 <style lang="scss">
-header 
+header {
     img.logo{
         width: 7rem;
     }
-    img.jumbo{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-
 }
 </style>
