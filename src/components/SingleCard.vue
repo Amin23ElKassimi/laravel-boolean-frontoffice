@@ -2,11 +2,12 @@
     <main class="container">
         <section class="row">
             <div class="col-12">
-                <ul>
-                    <li v-for="cocktail in cocktails" :key="cocktail.id">
-                        {{ cocktail.nome }}
-                    </li>
-                </ul>
+                <div class="card" style="width: 18rem;" v-for="cocktail in cocktails" :key="cocktail.id">
+                    <img :src="{{ cocktail.image_url }}" class="card-img-top" alt="img of the cocktail">
+                    <div class="card-body">
+                        <p class="card-text">{{ cocktail.nome }}</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
