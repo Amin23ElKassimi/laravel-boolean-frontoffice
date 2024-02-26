@@ -1,5 +1,5 @@
 <template lang="">
-    <div>
+    <!-- <div>
         <img :src="image" class="card-img-top mb-3" :class="fullLength ? '' : 'image-preview'" alt="...">
         <div class="card-body">
             <h5 class="card-title">
@@ -18,9 +18,10 @@
                 </router-link>
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
-<script>
+
+<!-- <script>
 export default {
     data() {
         return {
@@ -54,11 +55,7 @@ export default {
         },
     }
 }
-</script>
+</script> -->
+
 <style lang="scss" scoped>
-    img.image-preview{
-        height: 200px;
-        object-fit: cover;
-        margin-bottom: 2rem;
-    }
 </style>

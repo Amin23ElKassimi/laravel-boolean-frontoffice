@@ -9,6 +9,7 @@
 </script>
 <template>
     <AppHeader/>
+    <AppMain/>
     <!-- # questo e' illuogo dove tutto puo' cambiare in base alle rotte -->
     <router-view></router-view>
 </template>
