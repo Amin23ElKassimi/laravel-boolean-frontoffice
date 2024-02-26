@@ -1,12 +1,13 @@
 <template lang="">
     <main class="container">
-        <section class="row">
-            <div class="col-12">
-                <ul>
-                    <li v-for="cocktail in cocktails" :key="cocktail.id">
-                        {{ cocktail.nome }}
-                    </li>
-                </ul>
+        <section class="row ">
+            <div class="col-4" v-for="cocktail in cocktails" :key="cocktail.id">
+                <div class="card " style="width: 18rem" >
+                    <img :src="cocktail.image_url" class="card-img-top" alt="img of the cocktail">
+                    <div class="card-body">
+                        <p class="card-text">{{ cocktail.nome }}</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -48,5 +49,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+div.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 </style>
