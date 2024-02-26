@@ -2,7 +2,6 @@
     <main class="container">
         <section class="row">
             <div class="col-12">
-                <h3>Our cocktails</h3>
                 <ul>
                     <li v-for="cocktail in cocktails" :key="cocktail.id">
                         {{ cocktail.nome }}
