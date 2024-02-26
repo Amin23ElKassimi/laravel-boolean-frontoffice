@@ -1,8 +1,10 @@
 <template lang="">
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+     <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" data-bs-theme="dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Boolpress</a>
+                <a class="navbar-brand pe-5" href="#"> 
+                    <img class="logo" src="../../public/logo.png" alt="logo cocktails booleani">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -17,6 +19,9 @@
                 </div>
             </div>
         </nav>
+        <div class="jumbo">
+            <img class="jumbo" src="../../public/cocktails_jumbo.jpg" alt="img of cocktails">
+        </div>
     </header>
 </template>
 
@@ -30,12 +35,12 @@ export default {
                     routeName: 'home'
                 },
                 {
-                    label: 'Projects',
-                    routeName: 'projects'
+                    label: 'Chi siamo',
+                    routeName: 'ChiSiamo'
                 },
                 {
-                    label: 'Technologies',
-                    routeName: 'technologies'
+                    label: 'Contatti',
+                    routeName: 'contatti'
                 }
             ]
         }
@@ -43,6 +48,15 @@ export default {
 }
 </script>
 
-<style lang="">
+<style lang="scss">
+header 
+    img.logo{
+        width: 7rem;
+    }
+    img.jumbo{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
 
+}
 </style>

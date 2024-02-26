@@ -2,31 +2,31 @@
     <main class="container">
                 <!-- Lista Film da stampare come Cards -->
                 <div class="lista">                                                          
-            <article @click="printTest" v-for="(project, index) in projects"  class="cards text-uppercase fw-bold">
-                <!-- Card Title  -->
-                <p class="title">
-                    {{project.type.name}}
-                </p>
-                <!-- Original Title -->
-                <p>
-                    {{project.name}}
-                </p>
-                <!-- Language -->
-                <p>
-                    Original Language: {{project.description}} 
-                </p> 
-                <img :src="project.view" alt="Country Flag" >
-                <!-- Voto -->
-                <p>
-                    Vote: {{project.priority}}
-                </p>    
-             </article>
-        </div>
+                    <article @click="printTest" v-for="(project, index) in projects"  class="cards text-uppercase fw-bold">
+                        <!-- Card Title  -->
+                        <p class="title">
+                            {{project.type.name}}
+                        </p>
+                        <!-- Original Title -->
+                        <p>
+                            {{project.name}}
+                        </p>
+                        <!-- Language -->
+                        <p>
+                            Original Language: {{project.description}} 
+                        </p> 
+                        <img :src="project.view" alt="Country Flag" >
+                        <!-- Voto -->
+                        <p>
+                            Vote: {{project.priority}}
+                        </p>    
+                    </article>
+                </div>
     </main>
 </template>
 
 
-<script>
+<!-- <script>
 // Import Azion
 import axios from 'axios';
 
@@ -60,7 +60,7 @@ export default {
         this.getProjects();
     }
 }
-</script>
+</script> -->
 
 
 <style lang="scss" scoped>
@@ -69,11 +69,6 @@ export default {
 img{
     width: 100%;
 }
-
-main {
-        background-color: $primary-bg;
-        padding: 50px;
-    }
 
     .lista{
         display: flex;

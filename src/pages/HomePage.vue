@@ -1,7 +1,7 @@
 <template lang="">
-    <div class="container">
-        <h1>
-            HOME
+    <div class="container ">
+        <h1 class="p-3">
+            COCKTAILS
         </h1>
     </div>
 </template>
@@ -10,6 +10,6 @@ export default {
     name: 'HomePage'
 }
 </script>
-<style lang="">
+<style lang="scss">
 
 </style>
