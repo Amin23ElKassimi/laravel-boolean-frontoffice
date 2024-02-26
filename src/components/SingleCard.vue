@@ -1,61 +1,53 @@
 <template lang="">
-    <!-- <div>
-        <img :src="image" class="card-img-top mb-3" :class="fullLength ? '' : 'image-preview'" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">
-                {{ title }}
-            </h5>
-            <p class="card-text" v-if="fullLength">
-                {{ content }}
-            </p>
-            <p v-else>
-                {{ content.substring(0, 120) }}...
-            </p>
-
-            <div class="w-100 d-flex mb-3" v-if="linkRoute">
-                <router-link :to="linkRoute" class="btn btn-primary">
-                    {{ linkLabel }}
-                </router-link>
+    <main class="container">
+        <section class="row">
+            <div class="col-12">
+                <h3>Our cocktails</h3>
+                <ul>
+                    <li v-for="cocktail in cocktails" :key="cocktail.id">
+                        {{ cocktail.nome }}
+                    </li>
+                </ul>
             </div>
-        </div>
-    </div> -->
+        </section>
+    </main>
 </template>
 
-<!-- <script>
-export default {
-    data() {
-        return {
 
+<script>
+import axios from 'axios';
+
+export default {
+    name:'AppMain',
+    data(){
+        return{
+            cocktails: [],
         }
     },
-    props:{
-        title: {
-            required: true,
-            type: String,
-        },
-        content: {
-            required: true,
-            type: String,
-        },
-        image: {
-            required: true,
-            type: String,
-        },
-        linkRoute: {
-            required: false,
-            type: [ Object, String ]
-        },
-        linkLabel: {
-            required: false,
-            type: String,
-        },
-        fullLength: {
-            required: false,
-            type: Boolean,
-        },
+    methods:{
+        getCocktails(){
+            axios.get('http://127.0.0.1:8000/api/cocktails', {
+                params: {
+                }
+            })
+            .then((response) => {
+                console.log(response.data.results);
+                // mi serve il this. per poter accedere ai data
+                this.cocktails = response.data.results;
+
+            })
+            .catch(function (error) {
+                console.warn(error);
+                this.$router.push({ name: 'not-found' })
+            })
+        }
+    },
+    created(){
+        this.getCocktails();
     }
+
 }
-</script> -->
+</script>
 
 <style lang="scss" scoped>
 </style>
