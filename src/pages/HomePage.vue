@@ -6,17 +6,23 @@
         <h1 class="p-3">
             COCKTAILS
         </h1>
+        <SingleCard/>
+
     </div>
 </template>
 <script>
+import SingleCard from '@/components/SingleCard.vue';
 export default {
-    name: 'HomePage'
+    name: 'HomePage',
+    components:{
+        SingleCard
+    },
 }
 </script>
 <style lang="scss">
-img.jumbo{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+    img.jumbo{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
     }
 </style>

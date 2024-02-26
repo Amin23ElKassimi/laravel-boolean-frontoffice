@@ -1,61 +1,59 @@
 <template lang="">
-    <!-- <div>
-        <img :src="image" class="card-img-top mb-3" :class="fullLength ? '' : 'image-preview'" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">
-                {{ title }}
-            </h5>
-            <p class="card-text" v-if="fullLength">
-                {{ content }}
-            </p>
-            <p v-else>
-                {{ content.substring(0, 120) }}...
-            </p>
-
-            <div class="w-100 d-flex mb-3" v-if="linkRoute">
-                <router-link :to="linkRoute" class="btn btn-primary">
-                    {{ linkLabel }}
-                </router-link>
+    <main class="container">
+        <section class="row ">
+            <div class="col-4" v-for="cocktail in cocktails" :key="cocktail.id">
+                <div class="card " style="width: 18rem" >
+                    <img :src="cocktail.image_url" class="card-img-top" alt="img of the cocktail">
+                    <div class="card-body">
+                        <p class="card-text">{{ cocktail.nome }}</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div> -->
+        </section>
+    </main>
 </template>
 
-<!-- <script>
-export default {
-    data() {
-        return {
 
+<script>
+import axios from 'axios';
+
+export default {
+    name:'AppMain',
+    data(){
+        return{
+            cocktails: [],
         }
     },
-    props:{
-        title: {
-            required: true,
-            type: String,
-        },
-        content: {
-            required: true,
-            type: String,
-        },
-        image: {
-            required: true,
-            type: String,
-        },
-        linkRoute: {
-            required: false,
-            type: [ Object, String ]
-        },
-        linkLabel: {
-            required: false,
-            type: String,
-        },
-        fullLength: {
-            required: false,
-            type: Boolean,
-        },
-    }
-}
-</script> -->
+    methods:{
+        getCocktails(){
+            axios.get('http://127.0.0.1:8000/api/cocktails', {
+                params: {
+                }
+            })
+            .then((response) => {
+                console.log(response.data.results);
+                // mi serve il this. per poter accedere ai data
+                this.cocktails = response.data.results;
 
-<style lang="scss" scoped>
+            })
+            .catch(function (error) {
+                console.warn(error);
+                this.$router.push({ name: 'not-found' })
+            })
+        }
+    },
+    created(){
+        this.getCocktails();
+    }
+
+}
+</script>
+
+<style lang="scss">
+div.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 </style>
