@@ -1,15 +1,15 @@
 <template lang="">
     <main class="container">
         <section class="row ">
-            <div class="col-3 mb-5 relative d-flex justify-content-center align-items-center" v-for="cocktail in cocktails" :key="cocktail.id">
-                <div class="card " style="width: 18rem" >
+            <div class="col-3 mb-5 relative my-img" v-for="cocktail in cocktails" :key="cocktail.id">
+                <div class="card" style="width: 18rem" >
                     <img :src="cocktail.image_url" class="card-img-top" alt="img of the cocktail">
                     <!-- <div class="card-body">
                         <p class="card-text">{{ cocktail.nome }}</p>
                     </div> -->
                 </div>
 
-                <p class="card-text text-center fs-4 my-text">{{ cocktail.nome }}</p>
+                <p class="card-text text-center fs-4 my-text text-white">{{ cocktail.nome }}</p>
 
             </div>
         </section>
@@ -60,19 +60,26 @@ div.card{
     align-items: center;
     flex-wrap: wrap;
 }
+
 .relative {
     position: relative;
 }
 
 .my-text {
     position: absolute;
-    display: none;
-
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;    
 }
 
-.my-text:hover {
+.my-img:hover .my-text{
     display: inline-block;
+}
+
+.my-img:hover img {
+    filter: brightness(50%);
+    
 }
 
 </style>
