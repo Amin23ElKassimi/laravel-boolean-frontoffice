@@ -1,18 +1,18 @@
 
 <template lang="">
      <div class="container">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
 
             <h1 class="fs-4 text-center mt-5 pb-3">RIMANIAMO IN CONTATTO</h1>
             <hr>
 
 
-            <div class="col-6 text-center">
+            <div class="col-6">
                 <div class="">
                     <p>
                         Mettiti in contatto con noi, scrivici per commenti o anche solo per un saluto.
                     </p>
-                    <ul class="">
+                    <ul class="my-padding">
                         <li>Tramite il nostro Form</li>
                         <li>Via WhatsApp al numero 333 333 333</li>
                         <li>Tramite i nostri social</li>
@@ -24,7 +24,7 @@
                     <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
                 </div>
 
-                <div class="input-group">
+                <div class="input-group my-3">
                     <span class="input-group-text">Messaggio</span>
                     <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
