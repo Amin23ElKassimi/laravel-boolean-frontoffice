@@ -1,6 +1,6 @@
 <template lang="">
-     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" data-bs-theme="dark">
+    <header>
+        <nav class="navbar navbar-expand-lg p-0" data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand pe-5" href="#"> 
                     <img class="logo" src="../../public/logo.png" alt="logo cocktails booleani">
@@ -19,7 +19,6 @@
                 </div>
             </div>
         </nav>
-        
     </header>
 </template>
 
@@ -48,8 +47,9 @@ export default {
 
 <style lang="scss">
 header {
+    background-color: #CFBDDA;
     img.logo{
-        width: 7rem;
+        width: 3rem;
     }
 }
 </style>

@@ -98,11 +98,11 @@ export default {
 </script>
 <style>
     footer {
-        background-color:#2B3036;
+        background-color:#CFBDDA;
     }
 
     i {
-        color: #A0A2A4;
+        color: black;
     }
 
     div span i {
@@ -116,6 +116,6 @@ export default {
     }
 
     .text-color-footer {
-        color: #A0A2A4;
+        color: black;
     }
 </style>
