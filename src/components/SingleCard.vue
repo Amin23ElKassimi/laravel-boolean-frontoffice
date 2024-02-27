@@ -1,6 +1,16 @@
 <template lang="">
+    
     <main class="container">
         <section class="row ">
+            <div class="col-12 my-3">
+
+                <select class="form-select w-25" aria-label="Default select example">
+                    <option selected>Filtra per tipo</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
             <div class="col-3 mb-5 relative my-img" v-for="cocktail in cocktails" :key="cocktail.id">
                 <div class="card" style="width: 18rem" >
                     <img :src="cocktail.image_url" class="card-img-top" alt="img of the cocktail">
