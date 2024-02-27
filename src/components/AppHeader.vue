@@ -53,7 +53,7 @@ header {
     }
 
     .text-color-footer {
-        color: black;
+        color: rgba(0, 0, 0, 0.700);
     }
 }
 </style>

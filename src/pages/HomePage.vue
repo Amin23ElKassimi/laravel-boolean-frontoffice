@@ -2,10 +2,10 @@
     <div class="jumbo">
         <img class="jumbo" src="../../public/cocktails_jumbo.jpg" alt="img of cocktails">
     </div>
-    <div class="container ">
-        <h1 class="p-3">
-            COCKTAILS
-        </h1>
+    <div class="container">
+        <h3 class="p-4 text-center text-color-footer ">
+            Il nostro menù
+        </h3>
         <SingleCard/>
 
     </div>
