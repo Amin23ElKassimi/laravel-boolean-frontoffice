@@ -11,7 +11,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item" v-for="(link, index) in linkItems" :key="index">
-                            <router-link :to="{ name: link.routeName }" class="nav-link">
+                            <router-link :to="{ name: link.routeName }" class="nav-link text-color-footer">
                                 {{ link.label }}
                             </router-link>
                         </li>
@@ -49,7 +49,11 @@ export default {
 header {
     background-color: #CFBDDA;
     img.logo{
-        width: 3rem;
+        width: 4rem;
+    }
+
+    .text-color-footer {
+        color: black;
     }
 }
 </style>

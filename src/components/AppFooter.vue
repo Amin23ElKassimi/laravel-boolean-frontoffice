@@ -130,4 +130,8 @@ export default {
     color: white;
 
     }
+
+    h3 {
+        text-decoration: none;
+    }
 </style>
