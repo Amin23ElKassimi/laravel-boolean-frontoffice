@@ -1,13 +1,16 @@
 <template lang="">
     <main class="container">
         <section class="row ">
-            <div class="col-3 mb-5" v-for="cocktail in cocktails" :key="cocktail.id">
+            <div class="col-3 mb-5 relative d-flex justify-content-center align-items-center" v-for="cocktail in cocktails" :key="cocktail.id">
                 <div class="card " style="width: 18rem" >
                     <img :src="cocktail.image_url" class="card-img-top" alt="img of the cocktail">
-                    <div class="card-body">
+                    <!-- <div class="card-body">
                         <p class="card-text">{{ cocktail.nome }}</p>
-                    </div>
+                    </div> -->
                 </div>
+
+                <p class="card-text text-center fs-4 my-text">{{ cocktail.nome }}</p>
+
             </div>
         </section>
     </main>
@@ -50,10 +53,26 @@ export default {
 </script>
 
 <style lang="scss">
+
 div.card{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
+.relative {
+    position: relative;
+}
+
+.my-text {
+    position: absolute;
+    display: none;
+
+    
+}
+
+.my-text:hover {
+    display: inline-block;
+}
+
 </style>
