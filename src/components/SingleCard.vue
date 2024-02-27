@@ -1,7 +1,7 @@
 <template lang="">
     <main class="container">
         <section class="row ">
-            <div class="col-4" v-for="cocktail in cocktails" :key="cocktail.id">
+            <div class="col-3 mb-5" v-for="cocktail in cocktails" :key="cocktail.id">
                 <div class="card " style="width: 18rem" >
                     <img :src="cocktail.image_url" class="card-img-top" alt="img of the cocktail">
                     <div class="card-body">
