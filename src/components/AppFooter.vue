@@ -4,7 +4,7 @@
             
             <div class="row py-4">
                 <div class="col-3 mt-3">
-                    <h3 class="text-uppercase fs-5 text-color-footer">
+                    <h3 class="text-uppercase fs-5 text-white">
                         Cocktails Booleani
                     </h3>
 
@@ -117,5 +117,11 @@ export default {
 
     .text-color-footer {
         color: #A0A2A4;
+    }
+
+    li:hover {
+
+        color: white;
+
     }
 </style>
