@@ -10,7 +10,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item" v-for="(link, index) in linkItems" :key="index">
+                        <li class="nav-item fs-5" v-for="(link, index) in linkItems" :key="index">
                             <router-link :to="{ name: link.routeName }" class="nav-link text-color-footer">
                                 {{ link.label }}
                             </router-link>
