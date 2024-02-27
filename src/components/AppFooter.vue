@@ -47,7 +47,7 @@
 
                 <div class="col-3 mt-3">
                     <h3 class="text-uppercase fs-5 text-color-footer">
-                       Altre informazioni
+                        Altre informazioni
                     </h3>
 
                     <div class="mt-4">
@@ -69,7 +69,7 @@
 
                 <div class="col-3 mt-3">
                     <h3 class="text-uppercase fs-5 text-color-footer">
-                       Info Legali
+                        Info Legali
                     </h3>
 
                     <div class="mt-4 ">
@@ -85,14 +85,8 @@
                             </li>
                         </ul>
                     </div>
-
-            
                 </div>
-
-
-                
             </div>
-
         </div>
 
     </footer>
