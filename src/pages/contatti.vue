@@ -29,6 +29,8 @@
                     <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
 
+                <button type="submit" class="btn btn-dark my-2">Submit</button>
+
             </div>
         </div>
     </div>
