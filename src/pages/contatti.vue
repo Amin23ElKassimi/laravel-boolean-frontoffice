@@ -3,7 +3,7 @@
      <div class="container">
         <div class="row d-flex justify-content-center">
 
-            <h1 class="fs-4 text-center mt-5 pb-3">RIMANIAMO IN CONTATTO</h1>
+            <h1 class="fs-4 text-center mt-5 pb-3 text-color-footer">RIMANIAMO IN CONTATTO</h1>
             <hr>
 
 
@@ -12,11 +12,11 @@
                     <p>
                         Mettiti in contatto con noi, scrivici per commenti o anche solo per un saluto.
                     </p>
-                    <ul class="my-padding">
-                        <li>Tramite il nostro Form</li>
-                        <li>Via WhatsApp al numero 333 333 333</li>
-                        <li>Tramite i nostri social</li>
-                    </ul>
+                    <div class="my-padding">
+                        <p>Tramite il nostro Form</p>
+                        <p>Via WhatsApp al numero 333 333 333</p>
+                        <p>Tramite i nostri social</p>
+                    </div>
                 </div>
         
                 <div class="input-group w-50 text-center">
@@ -29,7 +29,7 @@
                     <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-dark my-2">Contattaci</button>
+                <button type="submit" class="btn btn-dark mt-3 mb-5">Contattaci</button>
 
             </div>
         </div>

@@ -1,5 +1,5 @@
 <template >
-    <div class="container pt-4 pb-4">
+    <div class="container pt-4 pb-4 text-color-footer">
         <h3>Chi siamo</h3>
         <p>Benvenuti nel mondo dei cocktail creati con passione e inventiva da quattro giovani talenti di Boolean Cocktail Academy! <br>
             Siamo impegnati a offrire un servizio di qualità e a superare le aspettative dei nostri clienti. Oltre alla nostra dedizione alla perfezione nei cocktail, ci sforziamo di creare un'atmosfera accogliente e inclusiva, dove ogni ospite si senta parte di questa esperienza unica. <br>
