@@ -3,14 +3,7 @@
     <main class="container">
         <section class="row ">
             <div id="vue-instance">
-                <select v-model="selected">
-                    <option v-for="item in types" :value="item" :key="item.id">
-                    {{ item.name }}
-                    </option>
-                </select>
-                <p>
-                    ID Selected: {{ selected.id }}
-                </p>
+                
             </div>
             <div class="col-3 mb-5 relative my-img" v-for="cocktail in cocktails" :key="cocktail.id">
                 <div class="card" style="width: 18rem" >
