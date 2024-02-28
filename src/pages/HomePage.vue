@@ -11,12 +11,18 @@
     </div>
 </template>
 <script>
+
 import SingleCard from '@/components/SingleCard.vue';
+
 export default {
     name: 'HomePage',
+    
+
     components:{
         SingleCard
     },
+
+
 }
 </script>
 <style lang="scss">

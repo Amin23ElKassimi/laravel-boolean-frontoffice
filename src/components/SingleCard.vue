@@ -2,14 +2,15 @@
     
     <main class="container">
         <section class="row ">
-            <div class="col-12 my-3">
-
-                <select class="form-select w-25" aria-label="Default select example">
-                    <option selected>Filtra per tipo</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+            <div id="vue-instance">
+                <select v-model="selected">
+                    <option v-for="item in types" :value="item" :key="item.id">
+                    {{ item.name }}
+                    </option>
                 </select>
+                <p>
+                    ID Selected: {{ selected.id }}
+                </p>
             </div>
             <div class="col-3 mb-5 relative my-img" v-for="cocktail in cocktails" :key="cocktail.id">
                 <div class="card" style="width: 18rem" >
@@ -35,6 +36,16 @@ export default {
     data(){
         return{
             cocktails: [],
+            types: [],
+            inventory: [
+                {name: 'MacBook Air', id: 1},
+                {name: 'MacBook Pro', id: 2},
+                {name: 'Lenovo W530', id: 3},
+                {name: 'Acer Aspire One', id: 4}
+                    ],
+            selected: {
+                id: 2
+                 }
         }
     },
     methods:{
@@ -44,7 +55,7 @@ export default {
                 }
             })
             .then((response) => {
-                console.log(response.data.results);
+                // console.log(response.data.results);
                 // mi serve il this. per poter accedere ai data
                 this.cocktails = response.data.results;
 
@@ -53,10 +64,27 @@ export default {
                 console.warn(error);
                 this.$router.push({ name: 'not-found' })
             })
+        },
+        getTypes(){
+            axios.get('http://127.0.0.1:8000/api/types', {
+                params: {
+                }
+            })
+            .then((response) => {
+                // console.log(response.data.results);
+                this.types = response.data.results;
+
+            })
+            .catch(function (error) {
+                console.warn(error);
+                // this.$router.push({ name: 'not-found' })
+            })
         }
     },
     created(){
         this.getCocktails();
+        this.getTypes();
+        console.log(this.types);
     }
 
 }
