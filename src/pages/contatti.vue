@@ -29,7 +29,7 @@
                     <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-dark my-2">Contattaci</button>
+                <button type="submit" class="btn btn-dark mt-3 mb-5">Contattaci</button>
 
             </div>
         </div>
