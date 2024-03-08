@@ -12,6 +12,7 @@
                         <p class="card-text">{{ cocktail.nome }}</p>
                     </div> -->
                 </div>
+                
 
                 <p class="card-text text-center fs-4 my-text text-white">{{ cocktail.nome }}</p>
 
